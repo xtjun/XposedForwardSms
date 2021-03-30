@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Common string resources( don't need translate) -->
+<resources>
+    <string name="default_smscode_keywords">验证码|校验码|检验码|确认码|激活码|动态码|安全码|验证代码|校验代码|检验代码|激活代码|确认代码|动态代码|安全代码|登入码|认证码|识别码|短信口令|动态密码|交易码|上网密码|随机码|动态口令|驗證碼|校驗碼|檢驗碼|確認碼|激活碼|動態碼|驗證代碼|校驗代碼|檢驗代碼|確認代碼|激活代碼|動態代碼|登入碼|認證碼|識別碼|Code|code|CODE</string>
+
+    <!-- shared preference key -->
+    <string name="pref_enable">pref_enable</string>
+    <string name="pref_hide_launcher_icon">pref_hide_launcher_icon</string>
+    <string name="pref_choose_theme">pref_choose_theme</string>
+    <string name="pref_custom_device_identity">pref_custom_device_identity</string>
+
+    <string name="pref_verbose_log_mode">pref_verbose_log_mode</string>
+
+    <string name="pref_about">pref_about</string>
+    <string name="pref_version">pref_version</string>
+    <string name="pref_source_code">pref_source_code</string>
+    <string name="pref_donate_by_alipay">pref_donate_by_alipay</string>
+    <string name="pref_forward_channel_type">pref_forward_channel_type</string>
+    <string name="pref_channel_config_ding_token">pref_channel_config_ding_token</string>
+    <string name="pref_channel_config_bark_url">pref_channel_config_bark_url</string>
+    <string name="pref_channel_config_get_url">pref_channel_config_get_url</string>
+    <string name="pref_channel_config_post_url">pref_channel_config_post_url</string>
+    <string name="pref_channel_config_post_type">pref_channel_config_post_type</string>
+    <string name="pref_channel_config_post_body">pref_channel_config_post_body</string>
+    <string name="pref_test_sms">pref_test_sms</string>
+    <string name="pref_channel_config_wxcp_corpid">pref_channel_config_wxcp_corpid</string>
+    <string name="pref_channel_config_wxcp_agentid">pref_channel_config_wxcp_agentid</string>
+    <string name="pref_channel_config_wxcp_corpsecret">pref_channel_config_wxcp_corpsecret</string>
+    <string name="pref_channel_config_wxcp_touser">pref_channel_config_wxcp_touser</string>
+    <!-- shared preference key end -->
+
+
+    <!--  转发通道  -->
+    <string-array name="pref_forward_channel_list">
+        <item>@string/pref_forward_channel_get</item>
+        <item>@string/pref_forward_channel_post</item>
+        <item>@string/pref_forward_channel_dingTalk</item>
+        <item>@string/pref_forward_channel_bark</item>
+        <item>@string/pref_forward_channel_wxcp</item>
+    </string-array>
+
+    <string name="pref_forward_channel_default">GET</string>
+    <string name="pref_forward_channel_get">GET</string>
+    <string name="pref_forward_channel_post">POST</string>
+    <string name="pref_forward_channel_dingTalk">DING</string>
+    <string name="pref_forward_channel_bark">BARK</string>
+    <string name="pref_forward_channel_wxcp">WXCP</string>
+
+    <string-array name="pref_forward_channel_entry_list">
+        <item>@string/pref_forward_channel_entry_get</item>
+        <item>@string/pref_forward_channel_entry_post</item>
+        <item>@string/pref_forward_channel_entry_dingTalk</item>
+        <item>@string/pref_forward_channel_entry_bark</item>
+        <item>@string/pref_forward_channel_entry_wxcp</item>
+    </string-array>
+
+
+    <string-array name="pref_channel_config_post_type_list">
+        <item>@string/pref_channel_config_post_type_json</item>
+        <item>@string/pref_channel_config_post_type_from</item>
+    </string-array>
+
+    <string name="pref_channel_config_post_type_json">JSON</string>
+    <string name="pref_channel_config_post_type_from">FORM</string>
+    <string name="pref_channel_config_post_type_default">JSON</string>
+
+    <string-array name="pref_channel_config_post_type_entry_list">
+        <item>@string/pref_channel_config_post_type_entry_json</item>
+        <item>@string/pref_channel_config_post_type_entry_from</item>
+    </string-array>
+</resources>

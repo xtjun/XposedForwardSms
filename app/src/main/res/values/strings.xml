@@ -1,0 +1,166 @@
+<resources>
+    <string name="app_name">短信转发(Xposed)</string>
+    <string name="xposed_description">短信转发</string>
+
+    <!-- general -->
+    <string name="i_know">知道了</string>
+    <string name="ignore">忽略</string>
+    <string name="confirm">确定</string>
+    <string name="cancel">取消</string>
+    <string name="yes">是</string>
+    <string name="no">否</string>
+    <string name="okay">好的</string>
+    <!-- general end -->
+
+    <!-- preferences general -->
+    <string name="pref_general_title">通用</string>
+    <string name="pref_enable_title">总开关</string>
+    <string name="enable_module_title">模块未激活</string>
+    <string name="enable_module_message">请先激活本模块，否则本应用将无法工作！</string>
+    <string name="pref_enable_summary">模块已激活</string>
+    <string name="pref_enable_summary_alt">模块未激活，请先激活本模块</string>
+    <string name="open_xposed_installer">打开Xposed</string>
+    <string name="pref_hide_launcher_icon_title">隐藏应用图标</string>
+    <string name="pref_hide_launcher_icon_summary">隐藏后可从模块列表中打开本模块</string>
+    <string name="pref_choose_theme_title">主题</string>
+    <string name="pref_custom_device_identity_title">本机标识</string>
+    <string name="pref_custom_device_identity_summary">%s</string>
+    <string name="pref_custom_device_identity_dialogTitle">输入您的自定标识</string>
+    <!-- preferences general end -->
+
+    <!-- preferences general -->
+    <string name="pref_pref_channel_config_title">通道配置</string>
+
+    <string name="pref_forward_channel_type_title">通道选择</string>
+    <string name="pref_forward_channel_type_summary">当前通道：%s</string>
+    <string name="pref_forward_channel_entry_get">自定义GET</string>
+    <string name="pref_forward_channel_entry_post">自定义POST</string>
+    <string name="pref_forward_channel_entry_dingTalk">钉钉</string>
+    <string name="pref_forward_channel_entry_bark">Bark</string>
+    <string name="pref_forward_channel_entry_wxcp">企业微信应用消息</string>
+
+    <string name="pref_channel_config_get_url_title">GET的URL</string>
+    <string name="pref_channel_config_get_url_dialogTitle">GET的URL</string>
+    <string name="pref_channel_config_get_url_summary">输入您自定义GET的URL\n标题占位符：{{title}}；内容占位符：{{content}}。\n例：https://api.day.app/xxxx/{{title}}/{{content}}</string>
+
+    <string name="pref_channel_config_post_url_title">POST的URL</string>
+    <string name="pref_channel_config_post_url_dialogTitle">POST的URL</string>
+    <string name="pref_channel_config_post_url_summary">输入您自定义POST的URL</string>
+
+    <string name="pref_channel_config_post_type_title">POST请求数据类型</string>
+    <string name="pref_channel_config_post_type_summary">选择您自定的POST接口请求的数据类型\n当前选择：%s</string>
+    <string name="pref_channel_config_post_type_entry_json">JSON</string>
+    <string name="pref_channel_config_post_type_entry_from">表单</string>
+
+    <string name="pref_channel_config_post_body_title">POST请求参数</string>
+    <string name="pref_channel_config_post_body_dialogTitle">POST请求参数</string>
+    <string name="pref_channel_config_post_body_summary">无论上面选择何种，此参数均用【JSON】格式描述。\n标题占位符：{{title}}；内容占位符：{{content}}。\n例：{\"title\":\"{{title}}\",\"content\":\"{{content}}\"}</string>
+
+    <string name="pref_channel_config_ding_token_title">钉钉ACCESS_TOKEN</string>
+    <string name="pref_channel_config_ding_token_dialogTitle">钉钉机器人的ACCESS_TOKEN</string>
+    <string name="pref_channel_config_ding_token_summary">输入您创建的钉钉机器人的ACCESS_TOKEN</string>
+
+    <string name="pref_channel_config_bark_url_title">Bark的URL</string>
+    <string name="pref_channel_config_bark_url_dialogTitle">Bark的URL</string>
+    <string name="pref_channel_config_bark_url_summary">输入您在Bark的URL\n例：https://api.day.app/xxxx/推送标题/这里改成你自己的推送内容</string>
+
+    <string name="pref_channel_config_wxcp_corpid_title">企业ID</string>
+    <string name="pref_channel_config_wxcp_corpid_dialogTitle">企业ID</string>
+    <string name="pref_channel_config_wxcp_corpid_summary">输入您注册的企业微信的企业ID</string>
+
+    <string name="pref_channel_config_wxcp_agentid_title">应用AgentId</string>
+    <string name="pref_channel_config_wxcp_agentid_dialogTitle">应用AgentId</string>
+    <string name="pref_channel_config_wxcp_agentid_summary">输入您创建的应用的AgentId</string>
+
+    <string name="pref_channel_config_wxcp_corpsecret_title">应用Secret</string>
+    <string name="pref_channel_config_wxcp_corpsecret_dialogTitle">应用Secret</string>
+    <string name="pref_channel_config_wxcp_corpsecret_summary">输入您创建的应用的Secret</string>
+
+    <string name="pref_channel_config_wxcp_touser_title">推送UID</string>
+    <string name="pref_channel_config_wxcp_touser_dialogTitle">推送UID</string>
+    <string name="pref_channel_config_wxcp_touser_summary">输入您需要推送的UID\n多个以“|”分隔，推送全员填“@all”</string>
+
+    <!-- preferences general end -->
+
+
+    <!-- preference others -->
+    <string name="pref_test_sms_title">测试消息</string>
+    <string name="pref_test_sms_summary">点击发送一条测试消息，以检测配置是否可用</string>
+    <string name="pref_test_sms_sender">测试消息</string>
+    <string name="pref_test_sms_body">这是一条测试消息！</string>
+    <string name="pref_test_sms_suc">消息发送成功！</string>
+    <string name="pref_test_sms_err">消息发送失败！</string>
+    <string name="pref_others_title">其他</string>
+    <string name="pref_verbose_log_mode_title">输出详细日志</string>
+    <string name="pref_verbose_log_mode_summary">输出详细的日志到Xposed(仅用于调试)</string>
+    <!-- preference others end -->
+
+    <!-- preference about -->
+    <string name="pref_about_title">关于</string>
+    <string name="pref_version_title">版本</string>
+    <string name="pref_version_summary"><![CDATA[当前版本：%1$s (%2$d)]]></string>
+    <string name="pref_source_code_title">项目源码</string>
+    <string name="browser_install_or_enable_prompt">请安装或启用浏览器</string>
+    <string name="pref_donate_by_alipay_title">支付宝捐赠</string>
+    <string name="alipay_install_prompt">请先安装支付宝</string>
+    <string name="alipay_enable_prompt">请先启用支付宝</string>
+    <!-- preference about end -->
+
+    <!-- theme color -->
+    <string name="red">烈焰红</string>
+    <string name="pink">哔哩粉</string>
+    <string name="yellow">咸蛋黄</string>
+    <string name="teal">水鸭青</string>
+    <string name="green">原谅绿</string>
+    <string name="blue">胖次蓝</string>
+    <string name="violet">基佬紫</string>
+    <string name="black">Dark♂黑</string>
+    <!-- theme color end -->
+
+    <!-- code parsing notification -->
+    <string name="channel_name_smscode_notification">验证码通知</string>
+    <string name="code_notification_content">验证码：%s</string>
+    <!-- code parsing notification end -->
+
+    <!-- taichi users notice -->
+    <string name="taichi_users_notice">太极用户须知</string>
+    <string name="taichi_users_notice_content">1. 本模块需在太极·magisk(太极·阳)环境下工作。\n\n2. 太极用户如需使用所有功能，需要将以下应用添加至太极中：\n\t· 电话服务(com.android.phone)\n\t· Android系统(android)\n\n3. 若模块失效，请在太极的模块管理列表中重新勾选本模块，并重启手机。\n\n4. 如果无法自动输入，请升级太极到5.1.8及以上版本。</string>
+    <string name="taichi_install_prompt">请先安装太极</string>
+    <string name="taichi_enable_prompt">请先启用太极</string>
+    <string name="xposed_not_installed">请安装或启用Xposed</string>
+    <string name="add_apps_in_taichi">添加应用</string>
+    <string name="check_module_in_taichi">勾选模块</string>
+    <!-- taichi users notice end -->
+
+    <!-- edxposed users notice -->
+    <string name="edxposed_users_notice">EdXposed用户须知</string>
+    <string name="edxposed_users_notice_content">1. 本模块作用在以下应用中(也就是需要Hook以下应用)：\n\t· 电话服务(com.android.phone)\n\t· Android系统(android)\n\n2. 若模块显示未激活，请在模块管理列表中重新勾选本模块，并重启手机。\n\n3. 若您使用全局模式不生效，则切换为白名单（Xposed Hide 白）模式或者在作用域模式，同时需要将第1点中的应用添加进去。</string>
+    <!-- edxposed users notice end -->
+
+    <!-- check update -->
+    <string name="new_version_found">发现新版本！</string>
+    <string name="check_update_failed">检测更新失败，请重试。</string>
+    <string name="app_already_newest">已经是最新版本</string>
+    <string name="update_from_github">去GitHub更新</string>
+    <string name="update_from_coolapk">去酷安更新</string>
+    <string name="coolapk_install_prompt">请先安装酷安</string>
+    <string name="coolapk_enable_prompt">请先启用酷安</string>
+    <!-- check update end -->
+
+    <!-- theme Cyanea -->
+    <string name="label_theme_picker">主题选择</string>
+    <string name="pref_theme_title">主题</string>
+    <string name="pref_theme_summary">选择预设主题</string>
+    <string name="pref_primary_color_title">主色调(Primary color)</string>
+    <string name="pref_primary_color_summary"> </string>
+    <string name="pref_accent_color_title">强调色(Accent color)</string>
+    <string name="pref_accent_color_summary"> </string>
+    <string name="pref_background_color_title">背景色</string>
+    <string name="pref_background_color_summary"> </string>
+    <string name="pref_category_appearance">外观</string>
+    <string name="pref_colored_navigation_bar_title">导航栏颜色</string>
+    <string name="pref_colored_navigation_bar_summary">导航栏颜色和主色调保持一致</string>
+    <!-- theme Cyanea -->
+
+
+</resources>

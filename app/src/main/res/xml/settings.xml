@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="@string/pref_general_title">
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="@string/pref_enable"
+            android:summary="@string/pref_enable_summary"
+            android:title="@string/pref_enable_title"/>
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="@string/pref_hide_launcher_icon"
+            android:summary="@string/pref_hide_launcher_icon_summary"
+            android:title="@string/pref_hide_launcher_icon_title"/>
+
+        <Preference
+            android:key="@string/pref_choose_theme"
+            android:title="@string/pref_choose_theme_title"/>
+
+        <EditTextPreference
+            android:dependency="@string/pref_enable"
+            android:dialogTitle="@string/pref_custom_device_identity_dialogTitle"
+            android:negativeButtonText="@string/cancel"
+            android:positiveButtonText="@string/confirm"
+            android:key="@string/pref_custom_device_identity"
+            android:title="@string/pref_custom_device_identity_title"
+            android:summary="@string/pref_custom_device_identity_summary"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/pref_pref_channel_config_title">
+        <ListPreference
+            android:dependency="@string/pref_enable"
+            android:defaultValue="@string/pref_forward_channel_default"
+            android:entries="@array/pref_forward_channel_entry_list"
+            android:entryValues="@array/pref_forward_channel_list"
+            android:key="@string/pref_forward_channel_type"
+            android:summary="@string/pref_forward_channel_type_summary"
+            android:title="@string/pref_forward_channel_type_title"/>
+
+        <EditTextPreference
+            android:dependency="@string/pref_enable"
+            android:dialogTitle="@string/pref_channel_config_get_url_dialogTitle"
+            android:negativeButtonText="@string/cancel"
+            android:positiveButtonText="@string/confirm"
+            android:key="@string/pref_channel_config_get_url"
+            android:title="@string/pref_channel_config_get_url_title"
+            android:summary="@string/pref_channel_config_get_url_summary"/>
+
+        <EditTextPreference
+            android:dependency="@string/pref_enable"
+            android:dialogTitle="@string/pref_channel_config_post_url_dialogTitle"
+            android:negativeButtonText="@string/cancel"
+            android:positiveButtonText="@string/confirm"
+            android:key="@string/pref_channel_config_post_url"
+            android:title="@string/pref_channel_config_post_url_title"
+            android:summary="@string/pref_channel_config_post_url_summary"/>
+
+        <ListPreference
+            android:dependency="@string/pref_enable"
+            android:defaultValue="@string/pref_channel_config_post_type_default"
+            android:entries="@array/pref_channel_config_post_type_entry_list"
+            android:entryValues="@array/pref_channel_config_post_type_list"
+            android:key="@string/pref_channel_config_post_type"
+            android:title="@string/pref_channel_config_post_type_title"
+            android:summary="@string/pref_channel_config_post_type_summary"/>
+
+        <EditTextPreference
+            android:dependency="@string/pref_enable"
+            android:dialogTitle="@string/pref_channel_config_post_body_dialogTitle"
+            android:negativeButtonText="@string/cancel"
+            android:positiveButtonText="@string/confirm"
+            android:key="@string/pref_channel_config_post_body"
+            android:title="@string/pref_channel_config_post_body_title"
+            android:summary="@string/pref_channel_config_post_body_summary"/>
+
+        <EditTextPreference
+            android:dependency="@string/pref_enable"
+            android:dialogTitle="@string/pref_channel_config_ding_token_dialogTitle"
+            android:negativeButtonText="@string/cancel"
+            android:positiveButtonText="@string/confirm"
+            android:key="@string/pref_channel_config_ding_token"
+            android:title="@string/pref_channel_config_ding_token_title"
+            android:summary="@string/pref_channel_config_ding_token_summary"/>
+
+        <EditTextPreference
+            android:dependency="@string/pref_enable"
+            android:dialogTitle="@string/pref_channel_config_bark_url_dialogTitle"
+            android:negativeButtonText="@string/cancel"
+            android:positiveButtonText="@string/confirm"
+            android:key="@string/pref_channel_config_bark_url"
+            android:title="@string/pref_channel_config_bark_url_title"
+            android:summary="@string/pref_channel_config_bark_url_summary"/>
+
+        <EditTextPreference
+            android:dependency="@string/pref_enable"
+            android:dialogTitle="@string/pref_channel_config_wxcp_corpid_dialogTitle"
+            android:negativeButtonText="@string/cancel"
+            android:positiveButtonText="@string/confirm"
+            android:key="@string/pref_channel_config_wxcp_corpid"
+            android:title="@string/pref_channel_config_wxcp_corpid_title"
+            android:summary="@string/pref_channel_config_wxcp_corpid_summary"/>
+        <EditTextPreference
+            android:dependency="@string/pref_enable"
+            android:dialogTitle="@string/pref_channel_config_wxcp_agentid_dialogTitle"
+            android:negativeButtonText="@string/cancel"
+            android:positiveButtonText="@string/confirm"
+            android:key="@string/pref_channel_config_wxcp_agentid"
+            android:title="@string/pref_channel_config_wxcp_agentid_title"
+            android:summary="@string/pref_channel_config_wxcp_agentid_summary"/>
+        <EditTextPreference
+            android:dependency="@string/pref_enable"
+            android:dialogTitle="@string/pref_channel_config_wxcp_corpsecret_dialogTitle"
+            android:negativeButtonText="@string/cancel"
+            android:positiveButtonText="@string/confirm"
+            android:key="@string/pref_channel_config_wxcp_corpsecret"
+            android:title="@string/pref_channel_config_wxcp_corpsecret_title"
+            android:summary="@string/pref_channel_config_wxcp_corpsecret_summary"/>
+        <EditTextPreference
+            android:dependency="@string/pref_enable"
+            android:defaultValue="\@all"
+            android:dialogTitle="@string/pref_channel_config_wxcp_touser_dialogTitle"
+            android:negativeButtonText="@string/cancel"
+            android:positiveButtonText="@string/confirm"
+            android:key="@string/pref_channel_config_wxcp_touser"
+            android:title="@string/pref_channel_config_wxcp_touser_title"
+            android:summary="@string/pref_channel_config_wxcp_touser_summary"/>
+
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/pref_others_title">
+        <Preference
+            android:dependency="@string/pref_enable"
+            android:key="@string/pref_test_sms"
+            android:summary="@string/pref_test_sms_summary"
+            android:title="@string/pref_test_sms_title"/>
+        <SwitchPreference
+            android:defaultValue="false"
+            android:dependency="@string/pref_enable"
+            android:key="@string/pref_verbose_log_mode"
+            android:summary="@string/pref_verbose_log_mode_summary"
+            android:title="@string/pref_verbose_log_mode_title"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="@string/pref_about"
+        android:title="@string/pref_about_title">
+
+        <Preference
+            android:key="@string/pref_version"
+            android:summary="@string/pref_version_summary"
+            android:title="@string/pref_version_title"/>
+
+        <Preference
+            android:key="@string/pref_source_code"
+            android:title="@string/pref_source_code_title"/>
+
+        <Preference
+            android:key="@string/pref_donate_by_alipay"
+            android:title="@string/pref_donate_by_alipay_title"/>
+    </PreferenceCategory>
+
+</PreferenceScreen>
