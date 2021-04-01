@@ -13,7 +13,6 @@ import androidx.annotation.IntDef;
 import com.github.xtjun.xposed.forwardSms.BuildConfig;
 import com.github.xtjun.xposed.forwardSms.R;
 import com.xtjun.xpForwardSms.common.constant.Const;
-import com.xtjun.xpForwardSms.xp.hook.permission.PermissionGranterHook;
 import com.xtjun.xpForwardSms.xp.hook.sms.SmsHandlerHook;
 
 /**
@@ -199,8 +198,7 @@ public class PackageUtils {
         if (checkTaiChiExists(context)) {
             Intent intent = new Intent("me.weishu.exp.ACTION_ADD_APP");
             String uriStr = "package:" +
-                    SmsHandlerHook.ANDROID_PHONE_PACKAGE + "|" +
-                    PermissionGranterHook.ANDROID_PACKAGE;
+                    SmsHandlerHook.ANDROID_PHONE_PACKAGE;
             intent.setData(Uri.parse(uriStr));
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             context.startActivity(intent);

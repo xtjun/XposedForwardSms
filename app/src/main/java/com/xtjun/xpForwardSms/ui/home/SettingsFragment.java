@@ -18,7 +18,6 @@ import com.github.xtjun.xposed.forwardSms.BuildConfig;
 import com.github.xtjun.xposed.forwardSms.R;
 import com.jaredrummler.cyanea.prefs.CyaneaSettingsActivity;
 import com.xtjun.xpForwardSms.common.action.entity.SmsMsg;
-import com.xtjun.xpForwardSms.ui.home.action.impl.TestSmsAction;
 import com.xtjun.xpForwardSms.common.constant.Const;
 import com.xtjun.xpForwardSms.common.constant.MPrefConst;
 import com.xtjun.xpForwardSms.common.constant.PrefConst;
@@ -30,6 +29,7 @@ import com.xtjun.xpForwardSms.common.utils.StringUtils;
 import com.xtjun.xpForwardSms.common.utils.SystemUtil;
 import com.xtjun.xpForwardSms.common.utils.XLog;
 import com.xtjun.xpForwardSms.data.http.entity.ApkVersion;
+import com.xtjun.xpForwardSms.ui.home.action.impl.TestSmsAction;
 
 import java.util.Map;
 

@@ -3,11 +3,10 @@ package com.xtjun.xpForwardSms.xp;
 import android.util.Log;
 
 import com.github.xtjun.xposed.forwardSms.BuildConfig;
-import com.xtjun.xpForwardSms.common.utils.XSPUtils;
 import com.xtjun.xpForwardSms.common.utils.XLog;
+import com.xtjun.xpForwardSms.common.utils.XSPUtils;
 import com.xtjun.xpForwardSms.xp.hook.BaseHook;
 import com.xtjun.xpForwardSms.xp.hook.me.ModuleUtilsHook;
-import com.xtjun.xpForwardSms.xp.hook.permission.PermissionGranterHook;
 import com.xtjun.xpForwardSms.xp.hook.sms.SmsHandlerHook;
 
 import java.util.ArrayList;
@@ -26,7 +25,6 @@ public class HookEntry implements IXposedHookLoadPackage, IXposedHookZygoteInit 
         mHookList = new ArrayList<>();
         mHookList.add(new SmsHandlerHook()); // InBoundsSmsHandler Hook
         mHookList.add(new ModuleUtilsHook()); // ModuleUtils Hook
-        mHookList.add(new PermissionGranterHook()); // PackageManagerService Hook
     }
 
     @Override
