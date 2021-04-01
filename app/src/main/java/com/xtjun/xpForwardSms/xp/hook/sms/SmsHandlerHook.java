@@ -272,7 +272,7 @@ public class SmsHandlerHook extends BaseHook {
             return;
         }
 
-        ParseResult parseResult = new ForwardSmsWorker(mAppContext, mPhoneContext, intent).parse();
+        ParseResult parseResult = new ForwardSmsWorker(mAppContext, intent).parse();
         if (parseResult != null) {// parse succeed
             if (parseResult.isBlockSms()) {
                 XLog.d("Blocking code SMS...");

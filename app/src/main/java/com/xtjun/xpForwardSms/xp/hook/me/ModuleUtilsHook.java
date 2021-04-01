@@ -14,13 +14,13 @@ import de.robv.android.xposed.callbacks.XC_LoadPackage;
  */
 public class ModuleUtilsHook extends BaseHook {
 
-    private static final String SMSCODE_PACKAGE = BuildConfig.APPLICATION_ID;
+    private static final String HOOK_PACKAGE = BuildConfig.APPLICATION_ID;
     private static final int MODULE_VERSION = BuildConfig.MODULE_VERSION;
 
     @Override
     public void onLoadPackage(XC_LoadPackage.LoadPackageParam lpparam) throws Throwable {
 
-        if (SMSCODE_PACKAGE.equals(lpparam.packageName)) {
+        if (HOOK_PACKAGE.equals(lpparam.packageName)) {
             try {
                 XLog.i("Hooking current Xposed module status...");
                 hookModuleUtils(lpparam);

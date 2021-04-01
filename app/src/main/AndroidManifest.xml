@@ -7,7 +7,8 @@
 
     <application
         android:name="com.xtjun.xpForwardSms.ui.app.ForwardSmsApplication"
-        android:allowBackup="true"
+        tools:replace="android:allowBackup"
+        android:allowBackup="false"
         android:fullBackupContent="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
