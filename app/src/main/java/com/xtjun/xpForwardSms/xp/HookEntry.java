@@ -19,13 +19,10 @@ import de.robv.android.xposed.callbacks.XC_LoadPackage;
 
 public class HookEntry implements IXposedHookLoadPackage, IXposedHookZygoteInit {
 
-    private List<BaseHook> mHookList;
-
-    {
-        mHookList = new ArrayList<>();
-        mHookList.add(new SmsHandlerHook()); // InBoundsSmsHandler Hook
-        mHookList.add(new ModuleUtilsHook()); // ModuleUtils Hook
-    }
+    private final List<BaseHook> mHookList = new ArrayList<BaseHook>(){{
+        add(new SmsHandlerHook());//InBoundsSmsHandler Hook
+        add(new ModuleUtilsHook());//ModuleUtils Hook
+    }};
 
     @Override
     public void initZygote(StartupParam startupParam) throws Throwable {

@@ -23,7 +23,7 @@ import de.robv.android.xposed.XposedHelpers;
 import de.robv.android.xposed.callbacks.XC_LoadPackage;
 
 /**
- * Hook class com.android.internal.telephony.InBoundSmsHandler
+ * Hook class com.android.internal.telephony.InboundSmsHandler
  */
 public class SmsHandlerHook extends BaseHook {
 
@@ -31,7 +31,7 @@ public class SmsHandlerHook extends BaseHook {
 
     private static final String TELEPHONY_PACKAGE = "com.android.internal.telephony";
     private static final String SMS_HANDLER_CLASS = TELEPHONY_PACKAGE + ".InboundSmsHandler";
-    private static final String SMSCODE_PACKAGE = BuildConfig.APPLICATION_ID;
+    private static final String SELF_PACKAGE = BuildConfig.APPLICATION_ID;
 
     private Context mPhoneContext;
     private Context mAppContext;
@@ -209,7 +209,7 @@ public class SmsHandlerHook extends BaseHook {
 
     private class ConstructorHook extends XC_MethodHook {
         @Override
-        protected void afterHookedMethod(MethodHookParam param) throws Throwable {
+        protected void afterHookedMethod(MethodHookParam param) {
             try {
                 afterConstructorHandler(param);
             } catch (Throwable e) {
@@ -224,25 +224,12 @@ public class SmsHandlerHook extends BaseHook {
         if (mPhoneContext == null /*|| mAppContext == null*/) {
             mPhoneContext = context;
             try {
-                mAppContext = mPhoneContext.createPackageContext(SMSCODE_PACKAGE,
-                        Context.CONTEXT_IGNORE_SECURITY);
-//                initNotificationChannel();
+                mAppContext = mPhoneContext.createPackageContext(SELF_PACKAGE, Context.CONTEXT_IGNORE_SECURITY);
             } catch (Exception e) {
                 XLog.e("Create app context failed: %s", e);
             }
         }
     }
-//
-//    private void initNotificationChannel() {
-//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-//            String channelId = NotificationConst.CHANNEL_ID_SMSCODE_NOTIFICATION;
-//            String channelName = mAppContext.getString(R.string.channel_name_smscode_notification);
-//            NotificationUtils.createNotificationChannel(mPhoneContext,
-//                    channelId, channelName, NotificationManager.IMPORTANCE_HIGH);
-//            XLog.d("Init notification channel succeed");
-//        }
-//    }
-
 
     private class DispatchIntentHook extends XC_MethodHook {
         private final int mReceiverIndex;
@@ -252,7 +239,7 @@ public class SmsHandlerHook extends BaseHook {
         }
 
         @Override
-        protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
+        protected void beforeHookedMethod(MethodHookParam param) {
             try {
                 beforeDispatchIntentHandler(param, mReceiverIndex);
             } catch (Throwable e) {

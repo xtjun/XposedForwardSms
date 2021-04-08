@@ -25,7 +25,7 @@ public class SPUtils {
      * 获取设备标识
      */
     public static String getDeviceId(SharedPreferences preferences) {
-        return preferences.getString(PrefConst.PREF_CUSTOM_DEVICE_IDENTITY, "");
+        return preferences.getString(PrefConst.PREF_CUSTOM_DEVICE_IDENTITY, android.os.Build.MODEL);
     }
 
     /**
