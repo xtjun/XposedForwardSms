@@ -4,6 +4,9 @@
 
 # 应用截图
 <img src="screenshot/001.jpg" width="180"/>
+<img src="screenshot/002.jpg" width="180"/>
+<img src="screenshot/003.jpg" width="180"/>
+<img src="screenshot/004.jpg" width="180"/>
 
 # 使用
 1. Root你的设备，安装Xposed框架；
