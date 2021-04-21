@@ -34,6 +34,6 @@
 #### 第四步，配置通道
 通道选择【企业微信消息】，依次填入企业id、应用agentId、应用Secret
 推送UID保持默认
-<img src="img/weixin007.jpg" width="180"/>
+<img src="img/weixin007.jpg" width="600"/>
 
 
