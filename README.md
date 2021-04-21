@@ -3,10 +3,7 @@
 项目参考自[XposedSmsCode](https://github.com/tianma8023/XposedSmsCode)。
 
 # 应用截图
-<img src="screenshot/001.jpg" width="180"/>
-<img src="screenshot/002.jpg" width="180"/>
-<img src="screenshot/003.jpg" width="180"/>
-<img src="screenshot/004.jpg" width="180"/>
+<img src="screenshot/001.jpg" width="180"/><img src="screenshot/002.jpg" width="180"/><img src="screenshot/003.jpg" width="180"/><img src="screenshot/004.jpg" width="180"/>
 
 # 使用
 1. Root你的设备，安装Xposed框架；
@@ -23,7 +20,7 @@
 - 主题换肤
 
 # 配置教程（更新中）
-- [企业微信应用消息](/tutorials/workWeixin.md)
+- [企业微信应用消息](/tutorial/workWeixin.md)
 
 # 自定义GET/POST配置示例
 ### 引用变量：
