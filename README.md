@@ -20,6 +20,8 @@
 - 主题换肤
 
 # 配置教程（更新中）
+- [Bark（仅IOS接收）](/tutorial/bark.md)
+- [钉钉](/tutorial/dingtalk.md)
 - [企业微信应用消息](/tutorial/workWeixin.md)
 
 # 自定义GET/POST配置示例
