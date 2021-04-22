@@ -13,17 +13,21 @@ app store搜索下载Bark，或者[点此](https://apps.apple.com/cn/app/bark-%E
 
 #### 第二步：注册设备，获取Bark的URL
 点击按钮注册
+
 <img src="img/bark001.jpg" />
 
 允许发送通知
+
 <img src="img/bark002.jpg" />
 
 复制第二个链接
+
 <img src="img/bark003.jpg" />
 
 
 #### 第三步：配置通道
 通道选择【Bark】，填入获取的url
+
 <img src="img/bark004.jpg" width="600"/>
 
 
