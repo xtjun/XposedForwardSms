@@ -132,6 +132,20 @@
     </PreferenceCategory>
 
     <PreferenceCategory android:title="@string/pref_others_title">
+        <SwitchPreference
+            android:defaultValue="false"
+            android:dependency="@string/pref_enable"
+            android:key="@string/pref_filter_enable"
+            android:title="@string/pref_filter_enable_title"/>
+        <EditTextPreference
+            android:dependency="@string/pref_filter_enable"
+            android:defaultValue=""
+            android:dialogTitle="@string/pref_filter_keywords_dialogTitle"
+            android:negativeButtonText="@string/cancel"
+            android:positiveButtonText="@string/confirm"
+            android:key="@string/pref_filter_keywords"
+            android:title="@string/pref_filter_keywords_title"
+            android:summary="@string/pref_filter_keywords_summary"/>
         <Preference
             android:dependency="@string/pref_enable"
             android:key="@string/pref_test_sms"

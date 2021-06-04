@@ -27,6 +27,8 @@
     <string name="pref_channel_config_wxcp_agentid">pref_channel_config_wxcp_agentid</string>
     <string name="pref_channel_config_wxcp_corpsecret">pref_channel_config_wxcp_corpsecret</string>
     <string name="pref_channel_config_wxcp_touser">pref_channel_config_wxcp_touser</string>
+    <string name="pref_filter_enable">pref_filter_enable</string>
+    <string name="pref_filter_keywords">pref_filter_keywords</string>
     <!-- shared preference key end -->
 
 

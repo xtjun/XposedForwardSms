@@ -83,23 +83,40 @@ public class SPUtils {
     public static String getWxCorpid(SharedPreferences preferences) {
         return preferences.getString(PrefConst.PREF_CHANNEL_CONFIG_WXCP_CORPID, "");
     }
+
     /**
      * 企业微信应用AgentId
      */
     public static String getWxAgentid(SharedPreferences preferences) {
         return preferences.getString(PrefConst.PREF_CHANNEL_CONFIG_WXCP_AGENTID, "");
     }
+
     /**
      * 企业微信应用Secret
      */
     public static String getWxCorpsecret(SharedPreferences preferences) {
         return preferences.getString(PrefConst.PREF_CHANNEL_CONFIG_WXCP_CORPSECRET, "");
     }
+
     /**
      * 企业微信推送UID
      */
     public static String getWxTouser(SharedPreferences preferences) {
         return preferences.getString(PrefConst.PREF_CHANNEL_CONFIG_WXCP_TOUSER, "");
+    }
+
+    /**
+     * 过滤开关
+     */
+    public static boolean getFilterEnable(SharedPreferences preferences) {
+        return preferences.getBoolean(PrefConst.PREF_FILTER_ENABLE, false);
+    }
+
+    /**
+     * 过滤关键词
+     */
+    public static String getFilterKeywords(SharedPreferences preferences) {
+        return preferences.getString(PrefConst.PREF_FILTER_KEYWORDS, "");
     }
 
 }

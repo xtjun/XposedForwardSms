@@ -20,8 +20,8 @@ android {
         applicationId "com.github.xtjun.xposed.forwardSms"
         minSdkVersion 23
         targetSdkVersion 27
-        versionCode 3
-        versionName "0.0.3"
+        versionCode 4
+        versionName "0.0.4"
 
         buildConfigField("String", "LOG_TAG", "\"xposedForwardSms\"")
         buildConfigField("int", "MODULE_VERSION", "45")

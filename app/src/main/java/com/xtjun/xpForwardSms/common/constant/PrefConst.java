@@ -37,6 +37,9 @@ public interface PrefConst {
     String PREF_CHANNEL_CONFIG_WXCP_CORPSECRET = "pref_channel_config_wxcp_corpsecret";
     String PREF_CHANNEL_CONFIG_WXCP_TOUSER = "pref_channel_config_wxcp_touser";
 
+    String PREF_FILTER_ENABLE = "pref_filter_enable";
+    String PREF_FILTER_KEYWORDS = "pref_filter_keywords";
+
     // About
     String KEY_VERSION = "pref_version";
     String KEY_SOURCE_CODE = "pref_source_code";

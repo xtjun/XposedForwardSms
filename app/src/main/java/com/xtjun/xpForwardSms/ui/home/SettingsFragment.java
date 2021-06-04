@@ -153,6 +153,8 @@ public class SettingsFragment extends PreferenceFragmentCompat implements
             findPreference(PrefConst.PREF_CHANNEL_CONFIG_WXCP_AGENTID).setOnPreferenceChangeListener(listener);
             findPreference(PrefConst.PREF_CHANNEL_CONFIG_WXCP_CORPSECRET).setOnPreferenceChangeListener(listener);
             findPreference(PrefConst.PREF_CHANNEL_CONFIG_WXCP_TOUSER).setOnPreferenceChangeListener(listener);
+            findPreference(PrefConst.PREF_FILTER_ENABLE).setOnPreferenceChangeListener(listener);
+            findPreference(PrefConst.PREF_FILTER_KEYWORDS).setOnPreferenceChangeListener(listener);
     }
 
     @Override

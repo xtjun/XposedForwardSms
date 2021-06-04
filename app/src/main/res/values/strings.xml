@@ -83,16 +83,21 @@
     <!-- preferences general end -->
 
 
+
     <!-- preference others -->
+    <string name="pref_others_title">其他</string>
     <string name="pref_test_sms_title">测试消息</string>
     <string name="pref_test_sms_summary">点击发送一条测试消息，以检测配置是否可用</string>
     <string name="pref_test_sms_sender">测试消息</string>
     <string name="pref_test_sms_body">这是一条测试消息！</string>
     <string name="pref_test_sms_suc">消息发送成功！</string>
     <string name="pref_test_sms_err">消息发送失败！</string>
-    <string name="pref_others_title">其他</string>
     <string name="pref_verbose_log_mode_title">输出详细日志</string>
     <string name="pref_verbose_log_mode_summary">输出详细的日志到Xposed(仅用于调试)</string>
+    <string name="pref_filter_enable_title">开启过滤</string>
+    <string name="pref_filter_keywords_title">过滤关键词</string>
+    <string name="pref_filter_keywords_summary">过滤关键词(支持正则表达式)</string>
+    <string name="pref_filter_keywords_dialogTitle">过滤关键词(支持正则表达式)</string>
     <!-- preference others end -->
 
     <!-- preference about -->
