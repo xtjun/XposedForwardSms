@@ -38,16 +38,23 @@ public class SmsMsg implements Parcelable {
     @SerializedName("date")
     private long date;
 
+    // subId
+    @Expose
+    @SerializedName("subId")
+    private int subId;
+
     public static SmsMsg fromIntent(Intent intent) {
         SmsMessage[] smsMessageParts = SmsMessageUtils.fromIntent(intent);
+
         String sender = smsMessageParts[0].getDisplayOriginatingAddress();
         String body = SmsMessageUtils.getMessageBody(smsMessageParts);
+        int subId = SmsMessageUtils.getSubId(smsMessageParts[0]);
 
         sender = Normalizer.normalize(sender, Normalizer.Form.NFC);
         body = Normalizer.normalize(body, Normalizer.Form.NFC);
 
         SmsMsg message = new SmsMsg();
-        message.setSender(sender).setBody(body);
+        message.setSender(sender).setBody(body).setSubId(subId);
         return message;
     }
 
@@ -77,6 +84,14 @@ public class SmsMsg implements Parcelable {
         this.date = date;
     }
 
+    public int getSubId() {
+        return subId;
+    }
+
+    public SmsMsg setSubId(int subId) {
+        this.subId = subId;
+        return this;
+    }
 
     @Override
     public int describeContents() {
@@ -97,12 +112,13 @@ public class SmsMsg implements Parcelable {
     public SmsMsg() {
     }
 
-    @Generated(hash = 1542863351)
-    public SmsMsg(Long id, String sender, String body, long date) {
+    @Generated(hash = 1224986056)
+    public SmsMsg(Long id, String sender, String body, long date, int subId) {
         this.id = id;
         this.sender = sender;
         this.body = body;
         this.date = date;
+        this.subId = subId;
     }
 
     @Override
@@ -125,6 +141,7 @@ public class SmsMsg implements Parcelable {
     public void setId(Long id) {
         this.id = id;
     }
+
 
     public static final Parcelable.Creator<SmsMsg> CREATOR = new Parcelable.Creator<SmsMsg>() {
 

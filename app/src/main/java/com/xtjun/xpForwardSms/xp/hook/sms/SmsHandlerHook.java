@@ -8,6 +8,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.UserHandle;
 import android.provider.Telephony;
+import android.telephony.SubscriptionManager;
 
 import com.github.xtjun.xposed.forwardSms.BuildConfig;
 import com.xtjun.xpForwardSms.common.utils.XLog;
@@ -259,12 +260,27 @@ public class SmsHandlerHook extends BaseHook {
             return;
         }
 
+        // 设置卡槽信息
+        putPhoneIdAndSubIdExtra(param.thisObject, intent);
+
         ParseResult parseResult = new ForwardSmsWorker(mAppContext, intent).parse();
         if (parseResult != null) {// parse succeed
             if (parseResult.isBlockSms()) {
                 XLog.d("Blocking code SMS...");
                 deleteRawTableAndSendMessage(param.thisObject, param.args[receiverIndex]);
                 param.setResult(null);
+            }
+        }
+    }
+
+    private void putPhoneIdAndSubIdExtra(Object inboundSmsHandler, Intent intent) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP_MR1) {
+            try {
+                Object phone = XposedHelpers.getObjectField(inboundSmsHandler, "mPhone");
+                int phoneId = (Integer)XposedHelpers.callMethod(phone, "getPhoneId");
+                XposedHelpers.callStaticMethod(SubscriptionManager.class, "putPhoneIdAndSubIdExtra", intent, phoneId);
+            } catch (Exception e) {
+                XLog.e("Could not update intent with subscription id", e);
             }
         }
     }

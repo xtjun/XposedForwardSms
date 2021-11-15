@@ -65,7 +65,7 @@ public class ForwardSmsWorker {
             return null;
         }
 
-        //过滤短信
+        //过滤短信内容
         boolean filterFlag = true;
 
         if(XSPUtils.getFilterEnable(sp)){
